@@ -1,0 +1,33 @@
+h1{
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+p {
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+}
+
+body{
+    text-align: center;
+}
+
+#agrupar {
+    width: 960px;
+    margin: 15px auto;
+    text-align: left;
+}
+
+header{
+    background-color: #FFFBB9;
+    border: 1px solid #999999;
+    padding: 20px;
+}
+
+.navbar {
+    background-color: #CCCC;
+    border: 1px solid #999999;
+    padding: 5px 15px;
+    text-align: center;
+    font: bold 14px verdana, sans-serif;
+}
