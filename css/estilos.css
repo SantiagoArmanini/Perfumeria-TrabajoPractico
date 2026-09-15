@@ -13,7 +13,7 @@ body{
 }
 
 header{
-    background-color: #FFFBB9;
+    background-color: blue;
     border: 1px solid #999999;
     padding: 20px;
 }
@@ -21,7 +21,20 @@ header{
 .navbar {
     background-color: #CCCC;
     border: 1px solid #999999;
-    padding: 5px 15px;
-    text-align: center;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
     font: bold 14px verdana, sans-serif;
+}
+
+.logo img{
+    width: 60px;
+    height: auto;
+
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
 }
