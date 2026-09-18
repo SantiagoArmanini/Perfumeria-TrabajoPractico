@@ -38,3 +38,38 @@ header{
     text-decoration: none;
     color: black;
 }
+
+.productos{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.producto{
+    width: 2200px;
+    border: 2px solid blue;
+    padding: 15px;
+}
+
+.imagen-prodcuto{
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.registro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.campo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
