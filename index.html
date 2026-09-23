@@ -11,68 +11,93 @@
     </head>
     <body class="body">
         <header>
-            <div>
+            <div class="barra-promocional">
+                <p>Envíos a todo el país</p>
+            </div>
                 <nav class="navbar">
                     <div class="logo">
                             <img src="img/logo.png" alt="Logo de Perfumería">
 
                     </div>
-
-                    <a href="index.html">Home</a>
-                    <a href="paginas/hombre.html">Hombre</a>
-                    <a href="paginas/mujer.html">Mujer</a>
-                    <a href="paginas/unisex.html">Unisex</a>
-                    <a href="paginas/ofertas.html">Ofertas</a>
-                    <a href="paginas/registro.html">Registrarse</a>                    
-                    <a href="paginas/login.html">Logout</a>
+                    <div class="menu">
+                        <a href="index.html">Home</a>
+                        <a href="paginas/hombre.html">Hombre</a>
+                        <a href="paginas/mujer.html">Mujer</a>
+                        <a href="paginas/unisex.html">Unisex</a>
+                        <a href="paginas/ofertas.html">Ofertas</a>
+                        <a href="paginas/registro.html">Registrarse</a>                    
+                        <a href="paginas/login.html">Logout</a>
+                    </div>
                 </nav>
-            </div>
         </header>    
-        <main>
-            <section>
-                <h1>Bienvenidos a la Perfumeria</h1>
+        <main class="main">
+            <section class="bienvenida">
+                <h1>Bienvenidos a la Perfumería</h1>
                 <p>
-                    En nuestra perfumería, nos dedicamos a ofrecer una amplia gama de fragancias de alta calidad para hombres, mujeres y productos unisex.
-                    Nuestro objetivo es brindar a nuestros clientes una experiencia olfativa única y satisfactoria.
+                    Encontrá fragancias para cada estilo y ocasión.
                 </p>
+                <div class="botones-bienvenida">
+                    <a href="paginas/hombre.html">Ver catálogo</a>
+                    <a href="paginas/ofertas.html">Ver ofertas</a>
+                </div>
             </section>
-            <section class="destacados"> 
+            <section class="productos-destacados"> 
                 <h2>Productos destacados</h2>
-                <div class="productos">
-                    <article class="producto">
+                <div class="productos-grid">
+                    <article class="producto-card">
                         <div class="imagen-producto">
                             Imagen del Producto 1
                         </div>
                         <h3>Perfume 1</h3>
                         <p>Descripcion del Perfume 1</p>
-                        <p>$100</p>
-                        <button>Comprar o ver producto</button>
+                        <p class="precio-producto">$100</p>
+                        <div class="acciones-producto">
+                            <a href="img/perfume1">Ver producto</a>
+                            <button>Comprar</button>
+                        </div>
                     </article>
-                    <article class="producto">
+                    <article class="producto-card">
                         <div class="imagen-producto">
                             Imagen del Producto 2
                         </div>
                         <h3>Perfume 2</h3>
                         <p>Descripcion del Perfume 2</p>
-                        <p>$150</p>
-                        <button>Comprar o ver producto</button>
+                        <p class="precio-producto">$150</p>
+                        <div class="acciones-producto">
+                            <a href="img/perfume2">Ver producto</a>
+                            <button>Comprar</button>
+                        </div>
                     </article>
-                    <article class="producto">
+                    <article class="producto-card">
                         <div class="imagen-producto">
                             Imagen del Producto 3
                         </div>
                         <h3>Perfume 3</h3>
                         <p>Descripcion del Perfume 3</p>
-                        <p>$200</p>
-                        <button>Comprar o ver producto</button>
+                        <p class="precio-producto">$200</p>
+                        <div class="acciones-producto">
+                            <a href="img/perfume3">Ver producto</a>
+                            <button>Comprar</button>
+                        </div>
+                    </article>
+                    <article class="producto-card">
+                        <div class="imagen-producto">
+                            Imagen del Producto 4
+                        </div>
+                        <h3>Perfume 4</h3>
+                        <p>Descripcion del Perfume 4</p>
+                        <p class="precio-producto">$250</p>
+                        <div class="acciones-producto">
+                            <a href="img/perfume4">Ver producto</a>
+                            <button>Comprar</button>
+                        </div>
                     </article>
                 </div>
             </section>
         </main>
         <footer>
-            <p>
-                2026 Perfumería - Santiago Armanini
-            </p>
+            <p>2026 Perfumería - Trabajo práctico desarrollo web</p>
+            <p> Santiago Armanini </p>
         </footer>
     </body>
 </html>
