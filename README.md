@@ -2,4 +2,4 @@
 
 Desarrollado por: Armanini, Santiago.
 Este e-commerce es un proyecto desarrollado como trabajo práctico para presentar en la materia Desarrollo Web.
-El proyecto permite visualizar diferentes categorias, registrar usuario, iniciar sesion.
+El proyecto hace referencia a una perfumeria y permite visualizar diferentes categorias, registrar usuario, iniciar sesion.
