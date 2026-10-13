@@ -14,33 +14,127 @@
             <div class="barra-promocional">
                 <p>Envíos a todo el país</p>
             </div>
-                <nav class="navbar">
+                <nav class="navbar" aria-label="Navegación principal">
                     <div class="logo">
-                            <img src="img/logo.png" alt="Logo de Perfumería">
+                        <a href="index.html"><img src="img/logo.png" alt="Perfumería - Ir al inicio"></a>
                     </div>
                     <div class="menu">
-                        <a href="index.html">Home</a>
+                        <a href="index.html" aria-current="page">Inicio</a>
                         <a href="paginas/hombre.html">Hombre</a>
                         <a href="paginas/mujer.html">Mujer</a>
                         <a href="paginas/unisex.html">Unisex</a>
                         <a href="paginas/ofertas.html">Ofertas</a>
+                    </div>
+                    <div class="menu-usuario">
                         <a href="paginas/registro.html">Registrarse</a>                    
-                        <a href="paginas/login.html">Logout</a>
+                        <a href="paginas/login.html">Ingresar</a>
                     </div>
                 </nav>
         </header>    
         <main class="main">
             <section class="bienvenida">
-                <h1>Bienvenidos a la Perfumería</h1>
-                <p>
-                    Encontrá fragancias para cada estilo y ocasión.
-                </p>
-                <div class="botones-bienvenida">
-                    <a href="paginas/hombre.html">Ver catálogo</a>
-                    <a href="paginas/ofertas.html">Ver ofertas</a>
+                <div class="bienvenida-contenido">
+                    <h1>Bienvenidos a la Perfumería</h1>
+                    <p>
+                        Encontrá fragancias para cada estilo y ocasión.
+                    </p>
+                    <div class="botones-bienvenida">
+                        <a href="paginas/hombre.html">Ver catálogo</a>
+                        <a href="paginas/ofertas.html">Ver ofertas</a>
+                    </div>
+                </div>
+                <div class="bienvenida-imagen">
+                    <img src="img/perfume-principal.jpg" alt="Perfume destacado">
                 </div>
             </section>
-            <section class="productos-destacados"> 
+            <section class="categorias">
+                <h2>Explorá nuestras fragancias</h2>
+                <div class="categorias-contenedor">
+                    <article class="categoria-card">
+                        <a href="paginas/hombre.html">
+                            <img src="img/categoria-hombre.jpg" alt="Perfumes para hombre">
+                            <h3>Hombre</h3>
+                        </a>
+                    </article>
+                    <article class="categoria-card">
+                        <a href="paginas/mujer.html">
+                            <img src="img/categoria-mujer.jpg" alt="Perfumes para mujer">
+                            <h3>Mujer</h3>
+                        </a>
+                    </article>
+                    <article class="categoria-card">
+                        <a href="paginas/unisex.html">
+                            <img src="img/categoria-unisex.jpg" alt="Perfumes unisex">
+                            <h3>Unisex</h3>
+                        </a>
+                    </article>
+                </div>
+            </section>
+            <section class="productos-nuevos">
+                <h2>Recién llegados</h2>
+                <div class="productos-grid">
+                    <article class="producto-card">
+                        <div class="imagen-producto">
+                            <img src="img/nuevo1.jpg" alt="Perfume nuevo 1">
+                        </div>
+
+                        <h3>Perfume Nuevo 1</h3>
+                        <p>Descripcion del Perfume Nuevo 1</p>
+                        <p class="precio-producto">$120</p>
+                        <div class="acciones-producto">
+                            <span class="enlace-pendiente" title="Detalle de producto pendiente">Ver producto</span>
+                            <button type="button">Comprar</button>
+                        </div>
+                    </article>
+                    <article class="producto-card">
+                        <div class="imagen-producto">
+                            <img src="img/nuevo2.jpg" alt="Perfume nuevo 2">
+                        </div>
+                        <h3>Perfume Nuevo 2</h3>
+                        <p>Descripcion del Perfume Nuevo 2</p>
+                        <p class="precio-producto">$130</p>
+                        <div class="acciones-producto">
+                            <span class="enlace-pendiente" title="Detalle de producto pendiente">Ver producto</span>
+                            <button type="button">Comprar</button>
+                        </div>
+                    </article>
+                    <article class="producto-card">
+                        <div class="imagen-producto">
+                            <img src="img/nuevo3.jpg" alt="Perfume nuevo 3">
+                        </div>
+                        <h3>Perfume Nuevo 3</h3>
+                        <p>Descripcion del Perfume Nuevo 3</p>
+                        <p class="precio-producto">$130</p>
+                        <div class="acciones-producto">
+                            <span class="enlace-pendiente" title="Detalle de producto pendiente">Ver producto</span>
+                            <button type="button">Comprar</button>
+                        </div>
+                    </article>
+                    <article class="producto-card">
+                        <div class="imagen-producto">
+                            <img src="img/nuevo4.jpg" alt="Perfume nuevo 4">
+                        </div>
+                        <h3>Perfume Nuevo 4</h3>
+                        <p>Descripcion del Perfume Nuevo 4</p>
+                        <p class="precio-producto">$130</p>
+                        <div class="acciones-producto">
+                            <span class="enlace-pendiente" title="Detalle de producto pendiente">Ver producto</span>
+                            <button type="button">Comprar</button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section class="banner-ofertas">
+                <div class="banner-ofertas-contenido">
+                    <h2>Ofertas especiales</h2>
+                    <p>Descubrí nuestras promociones y descuentos exclusivos.</p>
+                    <a href="paginas/ofertas.html">Ver ofertas</a>
+                </div>
+                <div class="banner-ofertas-imagen">
+                    <img src="img/banner-ofertas.jpg" alt="Promociones especiales en perfumes">
+                </div>
+            </section>
+            <section class="productos-destacados">
                 <h2>Productos destacados</h2>
                 <div class="productos-grid">
                     <article class="producto-card">
@@ -51,7 +145,7 @@
                         <p>Descripcion del Perfume 1</p>
                         <p class="precio-producto">$100</p>
                         <div class="acciones-producto">
-                            <a href="img/perfume1">Ver producto</a>
+                            <span class="enlace-pendiente" title="Detalle de producto pendiente">Ver producto</span>
                             <button>Comprar</button>
                         </div>
                     </article>
@@ -63,7 +157,7 @@
                         <p>Descripcion del Perfume 2</p>
                         <p class="precio-producto">$150</p>
                         <div class="acciones-producto">
-                            <a href="img/perfume2">Ver producto</a>
+                            <span class="enlace-pendiente" title="Detalle de producto pendiente">Ver producto</span>
                             <button>Comprar</button>
                         </div>
                     </article>
@@ -75,7 +169,7 @@
                         <p>Descripcion del Perfume 3</p>
                         <p class="precio-producto">$200</p>
                         <div class="acciones-producto">
-                            <a href="img/perfume3">Ver producto</a>
+                            <span class="enlace-pendiente" title="Detalle de producto pendiente">Ver producto</span>
                             <button>Comprar</button>
                         </div>
                     </article>
@@ -87,16 +181,79 @@
                         <p>Descripcion del Perfume 4</p>
                         <p class="precio-producto">$250</p>
                         <div class="acciones-producto">
-                            <a href="img/perfume4">Ver producto</a>
+                            <span class="enlace-pendiente" title="Detalle de producto pendiente">Ver producto</span>
                             <button>Comprar</button>
                         </div>
                     </article>
                 </div>
             </section>
+            <section class="beneficios">
+                <h2>¿Por qué comprar con nosotros?</h2>
+                <div class="beneficios-contenedor">
+                    <article class="beneficio-card">
+                        <h3>Envíos a todo el país</h3>
+                        <p>Recibí tus fragancias donde te encuentres</p>
+                    </article>
+                    <article class="beneficio-card">
+                        <h3>Medios de pago</h3>
+                        <p>Consultá nuestras opciones de pago disponibles</p>
+                    </article>
+                    <article class="beneficio-card">
+                        <h3>Atención al cliente</h3>
+                        <p>Nuestro equipo está listo para ayudarte en cualquier momento.</p>
+                    </article>
+                </div>
+            </section>
+            <section class="marcas">
+                <h2>Nuestras marcas</h2>
+                <ul class="marcas-lista">
+                    <li class="marca-item">Marca 1</li>
+                    <li class="marca-item">Marca 2</li>
+                    <li class="marca-item">Marca 3</li>
+                    <li class="marca-item">Marca 4</li>
+                    <li class="marca-item">Marca 5</li>
+                    <li class="marca-item">Marca 6</li>
+                </ul>
+            </section>
         </main>
-        <footer>
-            <p>2026 Perfumería - Trabajo práctico desarrollo web</p>
-            <p> Santiago Armanini </p>
+        <footer class="footer">
+            <div class="footer-contenedor">
+                <div class="footer-columna">
+                    <h2>Perfumería</h2>
+                    <p>Tu fragancia, tu estilo.</p>
+                    <p>Envíos a todo el país</p>
+                </div>
+                <nav class="footer-columna" aria-label="Navegación del pie de página">
+                    <h2>Navegación</h2>
+                    <ul>
+                        <li>
+                            <a href="index.html">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="paginas/hombre.html">Hombre</a>
+                        </li>
+                        <li>
+                            <a href="paginas/mujer.html">Mujer</a>
+                        </li>
+                        <li>
+                            <a href="paginas/unisex.html">Unisex</a>
+                        </li>
+                        <li>
+                            <a href="paginas/ofertas.html">Ofertas</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer-columna">
+                    <h2>Información</h2>
+                    <p>Envíos a todo el país</p>
+                    <p>Medios de pago</p>
+                    <p>Atención al cliente</p>
+                </div>
+            </div>
+            <div class="footer-inferior">
+                <p>© 2026 Perfumería - Trabajo práctico desarrollo web</p>
+                <p> Santiago Armanini </p>
+            </div>
         </footer>
     </body>
 </html>

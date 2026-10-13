@@ -1,59 +1,120 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Perfumeria - Hombre</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../css/estilos.css">
-    </head>
-    <body class="body">
-        <header>
-            <div class="barra-promocional">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Perfumería - Hombre</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <header>
+        <div class="barra-promocional">
+            <p>Envíos a todo el país</p>
+        </div>
+        <nav class="navbar" aria-label="Navegación principal">
+            <div class="logo">
+                <a href="../index.html"><img src="../img/logo.png" alt="Perfumería - Ir al inicio"></a>
+            </div>
+            <div class="menu">
+                    <a href="../index.html">Inicio</a>
+                    <a href="hombre.html" aria-current="page">Hombre</a>
+                    <a href="mujer.html">Mujer</a>
+                    <a href="unisex.html">Unisex</a>
+                    <a href="ofertas.html">Ofertas</a>
+            </div>
+            <div class="menu-usuario">
+                <a href="registro.html">Registrarse</a>
+                <a href="login.html">Ingresar</a>
+            </div>
+        </nav>
+    </header>
+    <main class="main pagina-categoria">
+        <section class="encabezado-categoria">
+            <h1>Perfumes para hombre</h1>
+            <p>Explorá nuestra selección de fragancias masculinas.</p>
+        </section>
+        <section class="productos-destacados" aria-labelledby="titulo-catalogo">
+            <h2 id="titulo-catalogo">Catálogo de perfumes para hombre</h2>
+            <div class="productos-grid">
+            <article class="producto-card">
+                <div class="imagen-producto">
+                    Imagen de perfume masculino 1 (pendiente)
+                </div>
+                <h3>Perfume Hombre 1</h3>
+                <p>Descripción del perfume 1 por completar.</p>
+                <p class="precio-producto">$100.000</p>
+                <div class="acciones-producto">
+                    <span class="enlace-pendiente" title="Detalle de producto pendiente">Ver producto</span>
+                    <button type="button">Comprar</button>
+                </div>
+            </article>
+            <article class="producto-card">
+                <div class="imagen-producto">
+                    Imagen de perfume masculino 2 (pendiente)
+                </div>
+                <h3>Perfume Hombre 2</h3>
+                <p>Descripción del perfume 2 por completar.</p>
+                <p class="precio-producto">Precio a definir</p>
+                <div class="acciones-producto">
+                    <span class="enlace-pendiente" title="Detalle de producto pendiente">Ver producto</span>
+                    <button type="button">Comprar</button>
+                </div>
+            </article>
+            <article class="producto-card">
+                <div class="imagen-producto">
+                    Imagen de perfume masculino 3 (pendiente)
+                </div>
+                <h3>Perfume Hombre 3</h3>
+                <p>Descripción del perfume 3 por completar.</p>
+                <p class="precio-producto">Precio a definir</p>
+                <div class="acciones-producto">
+                    <span class="enlace-pendiente" title="Detalle de producto pendiente">Ver producto</span>
+                    <button type="button">Comprar</button>
+                </div>
+            </article>
+            <article class="producto-card">
+                <div class="imagen-producto">
+                    Imagen de perfume masculino 4 (pendiente)
+                </div>
+                <h3>Perfume Hombre 4</h3>
+                <p>Descripción del perfume 4 por completar.</p>
+                <p class="precio-producto">Precio a definir</p>
+                <div class="acciones-producto">
+                    <span class="enlace-pendiente" title="Detalle de producto pendiente">Ver producto</span>
+                    <button type="button">Comprar</button>
+                </div>
+            </article>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-contenedor">
+            <div class="footer-columna">
+                <h2>Perfumería</h2>
+                <p>Tu fragancia, tu estilo.</p>
                 <p>Envíos a todo el país</p>
             </div>
-            <div>
-                <nav class="navbar">
-                    <div class="logo">
-                        <img src="../img/logo.png" alt="Logo de Perfumería">
-                    </div>
-                    <div class="menu">
-                        <a href="../index.html">Home</a>
-                        <a href="hombre.html">Hombre</a>
-                        <a href="mujer.html">Mujer</a>
-                        <a href="unisex.html">Unisex</a>
-                        <a href="ofertas.html">Ofertas</a>
-                        <a href="registro.html">Registro</a>
-                        <a href="login.html">Logout</a>
-                    </div>
-                </nav>
+            <nav class="footer-columna" aria-label="Navegación del pie de página">
+                <h2>Navegación</h2>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="hombre.html">Hombre</a></li>
+                    <li><a href="mujer.html">Mujer</a></li>
+                    <li><a href="unisex.html">Unisex</a></li>
+                    <li><a href="ofertas.html">Ofertas</a></li>
+                </ul>
+            </nav>
+            <div class="footer-columna">
+                <h2>Información</h2>
+                <p>Envíos a todo el país</p>
+                <p>Medios de pago</p>
+                <p>Atención al cliente</p>
             </div>
-        </header>
-        <main class="pagina-categoria">
-            <section class="encabezado-categoria">
-                <h1>Perfumes para hombre</h1>
-                <p>Encontrá nuestras mejores fragancias para hombres.</p>
-            </section>
-            <section class="productos-destacados">
-                <div class="productos-grid">
-                    <article class="producto">
-
-                        <div class="imagen-producto">
-                            Imagen perfume destacado para hombre
-                        </div>
-
-                        <h3>Perfume Hombre 1</h3>
-
-                        <p>$100.000</p>
-
-                    </article>
-                </div>
-            </section>
-        </main>
-        <footer>
-            <p>2026 Perfumería - Trabajo práctico desarrollo web</p>
-            <p> Santiago Armanini </p>
-        </footer>
-    </body>
+        </div>
+        <div class="footer-inferior">
+            <p>© 2026 Perfumería - Trabajo práctico desarrollo web</p>
+            <p>Santiago Armanini</p>
+        </div>
+    </footer>
+</body>
 </html>
