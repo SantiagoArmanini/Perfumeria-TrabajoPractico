@@ -11,22 +11,7 @@
         <div class="barra-promocional">
             <p>Envíos a todo el país</p>
         </div>
-        <nav class="navbar" aria-label="Navegación principal">
-            <div class="logo">
-                <a href="../index.html"><img src="../img/logo.png" alt="Perfumería - Ir al inicio"></a>
-            </div>
-            <div class="menu">
-                    <a href="../index.html">Inicio</a>
-                    <a href="hombre.html" aria-current="page">Hombre</a>
-                    <a href="mujer.html">Mujer</a>
-                    <a href="unisex.html">Unisex</a>
-                    <a href="ofertas.html">Ofertas</a>
-            </div>
-            <div class="menu-usuario">
-                <a href="registro.html">Registrarse</a>
-                <a href="login.html">Ingresar</a>
-            </div>
-        </nav>
+        <div id="navbar" data-base="../"></div>
     </header>
     <main class="main pagina-categoria">
         <section class="encabezado-categoria">
@@ -34,57 +19,11 @@
             <p>Explorá nuestra selección de fragancias masculinas.</p>
         </section>
         <section class="productos-destacados" aria-labelledby="titulo-catalogo">
-            <h2 id="titulo-catalogo">Catálogo de perfumes para hombre</h2>
-            <div class="productos-grid">
-            <article class="producto-card">
-                <div class="imagen-producto">
-                    <img src="../img/perfume-hombre1.jpg" alt="Perfume Hombre 1">
-                </div>
-                <h3>Perfume Hombre 1</h3>
-                <p>Descripción del perfume 1 por completar.</p>
-                <p class="precio-producto">$100.000</p>
-                <div class="acciones-producto">
-                    <span class="enlace-pendiente" title="Detalle de producto pendiente">Ver producto</span>
-                    <button type="button">Comprar</button>
-                </div>
-            </article>
-            <article class="producto-card">
-                <div class="imagen-producto">
-                    <img src="../img/perfume-hombre2.jpg" alt="Perfume Hombre 2">
-                </div>
-                <h3>Perfume Hombre 2</h3>
-                <p>Descripción del perfume 2 por completar.</p>
-                <p class="precio-producto">Precio a definir</p>
-                <div class="acciones-producto">
-                    <span class="enlace-pendiente" title="Detalle de producto pendiente">Ver producto</span>
-                    <button type="button">Comprar</button>
-                </div>
-            </article>
-            <article class="producto-card">
-                <div class="imagen-producto">
-                    <img src="../img/perfume-hombre4.jpg" alt="Perfume Hombre 3">
-                </div>
-                <h3>Perfume Hombre 3</h3>
-                <p>Descripción del perfume 3 por completar.</p>
-                <p class="precio-producto">Precio a definir</p>
-                <div class="acciones-producto">
-                    <span class="enlace-pendiente" title="Detalle de producto pendiente">Ver producto</span>
-                    <button type="button">Comprar</button>
-                </div>
-            </article>
-            <article class="producto-card">
-                <div class="imagen-producto">
-                    <img src="../img/perfume-hombre4.jpg" alt="Perfume Hombre 4">
-                </div>
-                <h3>Perfume Hombre 4</h3>
-                <p>Descripción del perfume 4 por completar.</p>
-                <p class="precio-producto">Precio a definir</p>
-                <div class="acciones-producto">
-                    <span class="enlace-pendiente" title="Detalle de producto pendiente">Ver producto</span>
-                    <button type="button">Comprar</button>
-                </div>
-            </article>
-            </div>
+            <h2 id="titulo-catalogo">
+                Catálogo de perfumes para hombre
+            </h2>
+
+            <div class="productos-grid" id="cards-generadas" data-base="../"></div>
         </section>
     </main>
     <footer class="footer">
@@ -116,5 +55,9 @@
             <p>Santiago Armanini</p>
         </div>
     </footer>
+    <script src="../js/navegacion.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/login.js"></script>
+    <script src="../js/cards.js"></script>
 </body>
 </html>
