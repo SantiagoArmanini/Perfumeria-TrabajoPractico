@@ -1,13 +1,11 @@
-const producto1 = {
-    id: 1,
-    nombre: "Perfume Hombre 1",
-    descripcion: "Descripción del perfume 1 por completar.",
-    precio: 100000,
-    imagen: "img/perfume-hombre1.jpg"
-};
-
 const productos = [
-    producto1,
+    {
+        id: 1,
+        nombre: "Perfume Hombre 1",
+        descripcion: "Descripción del perfume 2 por completar.",
+        precio: null,
+        imagen: "img/perfume-hombre1.jpg"
+    },
     {
         id: 2,
         nombre: "Perfume Hombre 2",
@@ -30,6 +28,104 @@ const productos = [
         imagen: "img/perfume-hombre4.jpg"
     }
 ];
+
+const catalogos = {
+    hombre: productos,
+
+    mujer: [
+        {
+            id: 5,
+            nombre: "Perfume Mujer 1",
+            descripcion: "Descripción del perfume.",
+            precio: null,
+            imagen: "img/perfume-mujer1.jpg"
+        },
+        {
+            id: 6,
+            nombre: "Perfume Mujer 2",
+            descripcion: "Descripción del perfume.",
+            precio: null,
+            imagen: "img/perfume-mujer2.jpg"
+        },
+        {
+            id: 7,
+            nombre: "Perfume Mujer 3",
+            descripcion: "Descripción del perfume.",
+            precio: null,
+            imagen: "img/perfume-mujer1.jpg"
+        },
+        {
+            id: 8,
+            nombre: "Perfume Mujer 4",
+            descripcion: "Descripción del perfume.",
+            precio: null,
+            imagen: "img/perfume-mujer2.jpg"
+        }
+    ],
+
+    unisex: [
+        {
+            id: 9,
+            nombre: "Perfume Unisex 1",
+            descripcion: "Descripción del perfume.",
+            precio: null,
+            imagen: "img/perfume-hombre1.jpg"
+        },
+        {
+            id: 10,
+            nombre: "Perfume Unisex 2",
+            descripcion: "Descripción del perfume.",
+            precio: null,
+            imagen: "img/perfume-mujer1.jpg"
+        },
+        {
+            id: 11,
+            nombre: "Perfume Unisex 3",
+            descripcion: "Descripción del perfume.",
+            precio: null,
+            imagen: "img/perfume-hombre2.jpg"
+        },
+        {
+            id: 12,
+            nombre: "Perfume Unisex 4",
+            descripcion: "Descripción del perfume.",
+            precio: null,
+            imagen: "img/perfume-mujer2.jpg"
+        }
+
+    ],
+
+    ofertas: [
+        {
+            id: 13,
+            nombre: "Perfume en oferta 1",
+            descripcion: "Descripción del perfume.",
+            precio: null,
+            imagen: "img/perfume-hombre1.jpg"
+        },
+        {
+            id: 14,
+            nombre: "Perfume en oferta 2",
+            descripcion: "Descripción del perfume.",
+            precio: null,
+            imagen: "img/perfume-hombre2.jpg"
+        },
+        {
+            id: 15,
+            nombre: "Perfume en oferta 3",
+            descripcion: "Descripción del perfume.",
+            precio: null,
+            imagen: "img/perfume-mujer1.jpg"
+        },
+        {
+            id: 16,
+            nombre: "Perfume en oferta 4",
+            descripcion: "Descripción del perfume.",
+            precio: null,
+            imagen: "img/perfume-mujer2.jpg"
+        }
+    ]
+};
 
 function crearCard(producto, base) {
     let textoPrecio = "Precio a definir";
@@ -67,42 +163,44 @@ function crearCard(producto, base) {
     return card;
 }
 
-    function renderizarCards() {
-        const contenedor = document.getElementById("cards-generadas");
+function renderizarCards() {
+    const contenedor = document.getElementById("cards-generadas");
 
-        if(!contenedor) {
-            return;
-        }
+    if(!contenedor) {
+        return;
+    }
 
-        const base = contenedor.dataset.base || "";
-        let tarjetas = "";
+    const base = contenedor.dataset.base || "";
+    const categoria = contenedor.dataset.categoria;
+    const productosPagina = catalogos[categoria] || [];
+    let tarjetas = "";
 
-        productos.forEach(function(producto) {
-            tarjetas += crearCard(producto, base);
+    productosPagina.forEach(function(producto){
+        tarjetas += crearCard(producto, base);
+    });
+
+    contenedor.innerHTML = tarjetas;
+
+    const cards = contenedor.querySelectorAll(".producto-card");
+
+    cards.forEach(function(card) {
+        const botonSumar = card.querySelector(".btn-sumar");
+        const botonRestar = card.querySelector(".btn-restar");
+        const contador = card.querySelector(".cantidad");
+
+        let cantidad = 1;
+
+        botonSumar.addEventListener("click", function() {
+            cantidad += 1;
+            contador.textContent = cantidad;
         });
 
-        contenedor.innerHTML = tarjetas;
-
-        const cards = contenedor.querySelectorAll(".producto-card");
-
-        cards.forEach(function(card) {
-            const botonSumar = card.querySelector(".btn-sumar");
-            const botonRestar = card.querySelector(".btn-restar");
-            const contador = card.querySelector(".cantidad");
-
-            let cantidad = 1;
-
-            botonSumar.addEventListener("click", function() {
-                cantidad += 1;
+        botonRestar.addEventListener("click", function() {
+            if(cantidad > 1)    {
+                cantidad -= 1;
                 contador.textContent = cantidad;
-            });
-
-            botonRestar.addEventListener("click", function() {
-                if(cantidad > 1)    {
-                    cantidad -= 1;
-                    contador.textContent = cantidad;
-                }
-            });
+            }
+        });
     });
 }
 
