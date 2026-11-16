@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "nombre": "Noche Intensa",
+        "descripcion": "Fragancia masculina amaderada, con notas de ámbar. Presentación de 100 ml.",
+        "precio": 45000,
+        "categoria": "hombre",
+        "imagen": "img/perfume-hombre1.jpg",
+        "oferta": false
+    },
+    {
+        "id": 2,
+        "nombre": "Urban Black",
+        "descripcion": "Fragancia masculina fresca, con notas cítricas y especiadas. Presentación de 100 ml.",
+        "precio": 39000,
+        "categoria": "hombre",
+        "imagen": "img/perfume-hombre2.jpg",
+        "oferta": true
+    },
+    {
+        "id": 3,
+        "nombre": "Luz Floral",
+        "descripcion": "Fragancia femenina floral, con notas de jazmín y vainilla. Presentación de 100 ml.",
+        "precio": 42000,
+        "categoria": "mujer",
+        "imagen": "img/perfume-mujer1.jpg",
+        "oferta": false
+    },
+    {
+        "id": 4,
+        "nombre": "Rosa Suave",
+        "descripcion": "Fragancia femenina delicada, con notas de rosas y frutas. Presentación de 100 ml.",
+        "precio": 38000,
+        "categoria": "mujer",
+        "imagen": "img/perfume-mujer2.jpg",
+        "oferta": true
+    },
+    {
+        "id": 5,
+        "nombre": "Esencia Libre",
+        "descripcion": "Fragancia unisex con notas de bergamota y maderas suaves. Presentación de 100 ml.",
+        "precio": 40000,
+        "categoria": "unisex",
+        "imagen": "img/nuevo1.jpg",
+        "oferta": true
+    },
+    {
+        "id": 6,
+        "nombre": "Aura",
+        "descripcion": "Fragancia unisex con notas florales y almizcle. Presentación de 100 ml.",
+        "precio": 46000,
+        "categoria": "unisex",
+        "imagen": "img/nuevo2.jpg",
+        "oferta": false
+    }
+]

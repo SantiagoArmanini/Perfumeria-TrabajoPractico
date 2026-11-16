@@ -36,10 +36,30 @@ body {
 
 .logo {
     flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 14px;
+    background-color: white;
+    border: 1px solid #DDDDDD;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.logo a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
 .logo img{
-    width: 90px;
+    width: 140px;
     height: auto;
     display: block;
 }
@@ -643,4 +663,30 @@ footer p {
 
 .formulario-ayuda a {
     color: #333333;
+}
+
+.carrito-resumen {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.carrito-resumen p {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.carrito-resumen a {
+    color: #000000;
+}
+
+.producto-carrito p {
+    margin: 6px 0;
+}
+
+.producto-carrito .acciones-producto {
+    padding-top: 12px;
 }

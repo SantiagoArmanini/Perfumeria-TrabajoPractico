@@ -18,6 +18,10 @@ const paginas = [
     {
         titulo: "Ofertas",
         ruta: "paginas/ofertas.html"
+    },
+    {
+        titulo: "Carrito",
+        ruta: "paginas/carrito.html"
     }
 ];
     

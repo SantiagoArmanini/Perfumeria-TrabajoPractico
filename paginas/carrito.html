@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Perfumería - Carrito</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <header>
+        <div class="barra-promocional">
+            <p>Envíos a todo el país</p>
+        </div>
+        <div id="navbar" data-base="../"></div>
+    </header>
+    <main class="main pagina-categoria">
+        <section class="encabezado-categoria">
+            <h1>Tu carrito</h1>
+            <p>Revisá los productos que seleccionaste.</p>
+        </section>
+        <section class="productos-destacados"
+                aria-labelledby="titulo-carrito">
+
+            <h2 id="titulo-carrito">Productos seleccionados</h2>
+
+            <div id="carrito-productos"
+                class="productos-grid"
+                aria-live="polite">
+            </div>
+
+            <div class="carrito-resumen">
+                <p>
+                    Total:
+                    <strong id="carrito-total">$0</strong>
+                </p>
+
+                <a href="../index.html">Seguir comprando</a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-contenedor">
+            <div class="footer-columna">
+                <h2>Perfumería</h2>
+                <p>Tu fragancia, tu estilo.</p>
+                <p>Envíos a todo el país</p>
+            </div>
+            <nav class="footer-columna" aria-label="Navegación del pie de página">
+                <h2>Navegación</h2>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="hombre.html">Hombre</a></li>
+                    <li><a href="mujer.html">Mujer</a></li>
+                    <li><a href="unisex.html">Unisex</a></li>
+                    <li><a href="ofertas.html">Ofertas</a></li>
+                </ul>
+            </nav>
+            <div class="footer-columna">
+                <h2>Información</h2>
+                <p>Envíos a todo el país</p>
+                <p>Medios de pago</p>
+                <p>Atención al cliente</p>
+            </div>
+        </div>
+        <div class="footer-inferior">
+            <p>© 2026 Perfumería - Trabajo práctico desarrollo web</p>
+            <p>Santiago Armanini</p>
+        </div>
+    </footer>
+    <script src="../js/navegacion.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/login.js"></script>
+    <script src="../js/carrito.js"></script>
+    <script src="../js/carrito-pagina.js"></script>
+    
+</body>
+</html>

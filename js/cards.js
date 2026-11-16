@@ -1,131 +1,3 @@
-const productos = [
-    {
-        id: 1,
-        nombre: "Perfume Hombre 1",
-        descripcion: "Descripción del perfume 2 por completar.",
-        precio: null,
-        imagen: "img/perfume-hombre1.jpg"
-    },
-    {
-        id: 2,
-        nombre: "Perfume Hombre 2",
-        descripcion: "Descripción del perfume 2 por completar.",
-        precio: null,
-        imagen: "img/perfume-hombre2.jpg"
-    },
-    {
-        id: 3,
-        nombre: "Perfume Hombre 3",
-        descripcion: "Descripción del perfume 3 por completar.",
-        precio: null,
-        imagen: "img/perfume-hombre4.jpg"
-    },
-    {
-        id: 4,
-        nombre: "Perfume Hombre 4",
-        descripcion: "Descripción del perfume 4 por completar.",
-        precio: null,
-        imagen: "img/perfume-hombre4.jpg"
-    }
-];
-
-const catalogos = {
-    hombre: productos,
-
-    mujer: [
-        {
-            id: 5,
-            nombre: "Perfume Mujer 1",
-            descripcion: "Descripción del perfume.",
-            precio: null,
-            imagen: "img/perfume-mujer1.jpg"
-        },
-        {
-            id: 6,
-            nombre: "Perfume Mujer 2",
-            descripcion: "Descripción del perfume.",
-            precio: null,
-            imagen: "img/perfume-mujer2.jpg"
-        },
-        {
-            id: 7,
-            nombre: "Perfume Mujer 3",
-            descripcion: "Descripción del perfume.",
-            precio: null,
-            imagen: "img/perfume-mujer1.jpg"
-        },
-        {
-            id: 8,
-            nombre: "Perfume Mujer 4",
-            descripcion: "Descripción del perfume.",
-            precio: null,
-            imagen: "img/perfume-mujer2.jpg"
-        }
-    ],
-
-    unisex: [
-        {
-            id: 9,
-            nombre: "Perfume Unisex 1",
-            descripcion: "Descripción del perfume.",
-            precio: null,
-            imagen: "img/perfume-hombre1.jpg"
-        },
-        {
-            id: 10,
-            nombre: "Perfume Unisex 2",
-            descripcion: "Descripción del perfume.",
-            precio: null,
-            imagen: "img/perfume-mujer1.jpg"
-        },
-        {
-            id: 11,
-            nombre: "Perfume Unisex 3",
-            descripcion: "Descripción del perfume.",
-            precio: null,
-            imagen: "img/perfume-hombre2.jpg"
-        },
-        {
-            id: 12,
-            nombre: "Perfume Unisex 4",
-            descripcion: "Descripción del perfume.",
-            precio: null,
-            imagen: "img/perfume-mujer2.jpg"
-        }
-
-    ],
-
-    ofertas: [
-        {
-            id: 13,
-            nombre: "Perfume en oferta 1",
-            descripcion: "Descripción del perfume.",
-            precio: null,
-            imagen: "img/perfume-hombre1.jpg"
-        },
-        {
-            id: 14,
-            nombre: "Perfume en oferta 2",
-            descripcion: "Descripción del perfume.",
-            precio: null,
-            imagen: "img/perfume-hombre2.jpg"
-        },
-        {
-            id: 15,
-            nombre: "Perfume en oferta 3",
-            descripcion: "Descripción del perfume.",
-            precio: null,
-            imagen: "img/perfume-mujer1.jpg"
-        },
-        {
-            id: 16,
-            nombre: "Perfume en oferta 4",
-            descripcion: "Descripción del perfume.",
-            precio: null,
-            imagen: "img/perfume-mujer2.jpg"
-        }
-    ]
-};
 
 function crearCard(producto, base) {
     let textoPrecio = "Precio a definir";
@@ -142,66 +14,121 @@ function crearCard(producto, base) {
         
         <h3>${producto.nombre}</h3>
         <p>${producto.descripcion}</p>
-        <p class="precio-producto">
-            <p class="precio-producto">${textoPrecio}</p>
-        </p>
+        <p class="precio-producto">${textoPrecio}</p>
         <div class="control-cantidad">
             <button type="button" class="btn-restar">-</button>
             <span class="cantidad">1</span>
             <button type="button" class="btn-sumar">+</button>
         </div>
         <div class="acciones-producto">
-            <span class="enlace-pendiente"
-                title="Detalle de producto pendiente">
-                Ver producto
-            </span>
-            
-            <button type="button">Comprar</button>
+            <button type="button" class="btn-agregar">
+                Añadir al carrito
+            </button>
         </div>
+        <p class="mensaje-carrito" aria-live="polite"></p>
     </article>
     `;
     return card;
 }
 
-function renderizarCards() {
-    const contenedor = document.getElementById("cards-generadas");
+async function renderizarCards() {
+    const contenedores = document.querySelectorAll(
+        ".productos-grid[data-categoria]"
+    );
 
-    if(!contenedor) {
+    if (contenedores.length === 0) {
         return;
     }
 
-    const base = contenedor.dataset.base || "";
-    const categoria = contenedor.dataset.categoria;
-    const productosPagina = catalogos[categoria] || [];
-    let tarjetas = "";
+    const base = contenedores[0].dataset.base || "./";
 
-    productosPagina.forEach(function(producto){
-        tarjetas += crearCard(producto, base);
+    contenedores.forEach(function (contenedor) {
+        contenedor.textContent = "Cargando productos...";
     });
 
-    contenedor.innerHTML = tarjetas;
+    try {
+        const respuesta = await fetch(base + "datos/productos.json");
 
-    const cards = contenedor.querySelectorAll(".producto-card");
+        if (!respuesta.ok) {
+            throw new Error(
+                "No se pudo cargar el catálogo: " + respuesta.status
+            );
+        }
 
-    cards.forEach(function(card) {
-        const botonSumar = card.querySelector(".btn-sumar");
-        const botonRestar = card.querySelector(".btn-restar");
-        const contador = card.querySelector(".cantidad");
+        const productos = await respuesta.json();
 
-        let cantidad = 1;
+        contenedores.forEach(function (contenedor) {
+            const baseImagen = contenedor.dataset.base || "./";
+            const categoria = contenedor.dataset.categoria;
+            const limite = Number(contenedor.dataset.limite || 0);
 
-        botonSumar.addEventListener("click", function() {
-            cantidad += 1;
-            contador.textContent = cantidad;
-        });
+            let productosPagina = productos.filter(function (producto) {
+                if (categoria === "ofertas") {
+                    return producto.oferta === true;
+                }
 
-        botonRestar.addEventListener("click", function() {
-            if(cantidad > 1)    {
-                cantidad -= 1;
-                contador.textContent = cantidad;
+                return producto.categoria === categoria;
+            });
+
+            if (limite > 0) {
+                productosPagina = productosPagina.slice(0, limite);
             }
+
+            let tarjetas = "";
+
+            productosPagina.forEach(function (producto) {
+                tarjetas += crearCard(producto, baseImagen);
+            });
+
+            contenedor.innerHTML =
+                tarjetas || "<p>No hay productos disponibles.</p>";
+
+            const cards = contenedor.querySelectorAll(".producto-card");
+
+            cards.forEach(function (card, indice) {
+                const producto = productosPagina[indice];
+
+                const botonSumar = card.querySelector(".btn-sumar");
+                const botonRestar = card.querySelector(".btn-restar");
+                const botonAgregar = card.querySelector(".btn-agregar");
+
+                const contador = card.querySelector(".cantidad");
+                const mensaje = card.querySelector(".mensaje-carrito");
+
+                let cantidad = 1;
+
+                botonSumar.addEventListener("click", function () {
+                    cantidad += 1;
+                    contador.textContent = cantidad;
+                });
+
+                botonRestar.addEventListener("click", function () {
+                    if (cantidad > 1) {
+                        cantidad -= 1;
+                        contador.textContent = cantidad;
+                    }
+                });
+
+                botonAgregar.addEventListener("click", function () {
+                    agregarAlCarrito(producto, cantidad);
+
+                    mensaje.textContent =
+                        "Agregado al carrito: " +
+                        producto.nombre +
+                        " (cantidad: " +
+                        cantidad +
+                        ").";
+                });
+            });
         });
-    });
+    } catch (error) {
+        console.error(error);
+
+        contenedores.forEach(function (contenedor) {
+            contenedor.textContent =
+                "No se pudieron cargar los productos. Intentá nuevamente.";
+        });
+    }
 }
 
 renderizarCards();
