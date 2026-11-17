@@ -13,7 +13,16 @@ function mostrarCarrito() {
     let total = 0;
 
     if (carrito.length === 0) {
-        contenedor.textContent = "Tu carrito está vacío.";
+        contenedor.innerHTML = `
+            <div class="carrito-vacio">
+                <h3>Tu carrito está vacío</h3>
+                <p>
+                    Agregá tus fragancias favoritas para verlas acá.
+                    Podes volver al catalogo con "Seguir comprando".
+                </p>
+            </div>
+        `;
+
         totalElemento.textContent = "$0";
         return;
     }
@@ -32,17 +41,19 @@ function mostrarCarrito() {
                 <img>
             </div>
 
-            <h3 class="carrito-nombre"></h3>
+            <div class="carrito-detalle">
+                <h3 class="carrito-nombre"></h3>
 
-            <p class="carrito-descripcion"></p>
-            <p class="carrito-precio"></p>
-            <p class="carrito-cantidad"></p>
-            <p class="carrito-subtotal precio-producto"></p>
+                <p class="carrito-descripcion"></p>
+                <p class="carrito-precio"></p>
+                <p class="carrito-cantidad"></p>
+                <p class="carrito-subtotal precio-producto"></p>
 
-            <div class="acciones-producto">
-                <button type="button" class="btn-eliminar">
-                    Eliminar
-                </button>
+                <div class="acciones-producto">
+                    <button type="button" class="btn-eliminar">
+                        Eliminar
+                    </button>
+                </div>
             </div>
         `;
 

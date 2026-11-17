@@ -13,7 +13,7 @@ function crearCard(producto, base) {
         </div>
         
         <h3>${producto.nombre}</h3>
-        <p>${producto.descripcion}</p>
+        <p class="descripcion-producto">${producto.descripcion}</p>
         <p class="precio-producto">${textoPrecio}</p>
         <div class="control-cantidad">
             <button type="button" class="btn-restar">-</button>

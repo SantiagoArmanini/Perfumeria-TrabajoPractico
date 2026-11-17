@@ -18,25 +18,33 @@
             <h1>Tu carrito</h1>
             <p>Revisá los productos que seleccionaste.</p>
         </section>
-        <section class="productos-destacados"
-                aria-labelledby="titulo-carrito">
+        <div class="carrito-layout">
 
-            <h2 id="titulo-carrito">Productos seleccionados</h2>
+            <section class="carrito-listado"
+                    aria-labelledby="titulo-carrito">
 
-            <div id="carrito-productos"
-                class="productos-grid"
-                aria-live="polite">
-            </div>
+                <h2 id="titulo-carrito">Productos seleccionados</h2>
 
-            <div class="carrito-resumen">
+                <div id="carrito-productos"
+                    class="carrito-productos"
+                    aria-live="polite">
+                </div>
+            </section>
+
+            <aside class="carrito-resumen"
+                aria-labelledby="titulo-resumen">
+
+                <h2 id="titulo-resumen">Resumen de tu compra</h2>
+
                 <p>
-                    Total:
+                    <span>Total</span>
                     <strong id="carrito-total">$0</strong>
                 </p>
 
                 <a href="../index.html">Seguir comprando</a>
-            </div>
-        </section>
+            </aside>
+
+        </div>
     </main>
     <footer class="footer">
         <div class="footer-contenedor">

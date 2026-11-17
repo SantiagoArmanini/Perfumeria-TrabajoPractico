@@ -7,30 +7,14 @@
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
-    <header>
-        <div class="barra-promocional">
-            <p>Envíos a todo el país</p>
+    <header class="encabezado-acceso">
+        <div class="logo-acceso">
+            <img src="../img/logo.png" alt="Perfumería">
         </div>
-        <nav class="navbar" aria-label="Navegación principal">
-            <div class="logo">
-                <a href="../index.html"><img src="../img/logo.png" alt="Perfumería - Ir al inicio"></a>
-            </div>
-            <div class="menu">
-                    <a href="../index.html">Inicio</a>
-                    <a href="hombre.html">Hombre</a>
-                    <a href="mujer.html">Mujer</a>
-                    <a href="unisex.html">Unisex</a>
-                    <a href="ofertas.html">Ofertas</a>
-            </div>
-            <div class="menu-usuario">
-                <a href="registro.html" aria-current="page">Registrarse</a>
-                <a href="login.html">Ingresar</a>
-            </div>
-        </nav>
     </header>
     <main class="main pagina-formulario">
         <h1>Crear cuenta</h1>
-        <form class="formulario" action="" method="post">
+        <form class="formulario" id="form-registro" method="post">
             <p class="formulario-descripcion">Completá tus datos para registrarte.</p>
             <div class="campo">
                 <label for="nombre">Nombre:</label>
@@ -53,6 +37,7 @@
                 <input type="date" id="fechaNacimiento" name="fechaNacimiento" autocomplete="bday" required>
             </div>
             <button type="submit">Registrarse</button>
+            <p id="mensaje-registro" aria-live="polite"></p>
             <p class="formulario-ayuda">¿Ya tenés una cuenta? <a href="login.html">Iniciá sesión</a>.</p>
         </form>
     </main>
@@ -85,5 +70,6 @@
             <p>Santiago Armanini</p>
         </div>
     </footer>
+    <script src="../js/registro.js"></script>
 </body>
 </html>
